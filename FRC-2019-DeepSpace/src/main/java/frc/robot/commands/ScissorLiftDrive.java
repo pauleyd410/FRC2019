@@ -12,6 +12,9 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
+
+//Disc Arm commands
+
 public class ScissorLiftDrive extends Command {
   public ScissorLiftDrive() {
     requires(Robot.scissorlift);
@@ -27,7 +30,7 @@ public class ScissorLiftDrive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.scissorlift.set(ControlMode.PercentOutput, Robot.m_oi.getOperatorRightJoyY());
+    Robot.scissorlift.set(ControlMode.PercentOutput, .75*Robot.m_oi.getOperatorRightJoyY());
   }
 
   // Make this return true when this Command no longer needs to run execute()

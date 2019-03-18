@@ -14,6 +14,7 @@ import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -40,7 +41,7 @@ public class Robot extends TimedRobot {
   public static CascadeLift cascadelift;
 
   public static BallPickup ballpickup;
-
+  
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -56,6 +57,9 @@ public class Robot extends TimedRobot {
     scissorlift = new ScissorLift();
     cascadelift = new CascadeLift();
     ballpickup = new BallPickup();
+   // CameraServer.getInstance().startAutomaticCapture();
+    CameraServer.getInstance().startAutomaticCapture(0);
+    CameraServer.getInstance().startAutomaticCapture(1);
     //Compressor compressor = new Compressor();
     //CameraServer.getInstance().startAutomaticCapture();
     //compressor.start();
