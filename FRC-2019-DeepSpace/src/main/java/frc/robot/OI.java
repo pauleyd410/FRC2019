@@ -35,6 +35,7 @@ public double getLeftJoyY(){
   double raw = DriverStick.getY(Hand.kLeft);
   return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
 }
+
 public double getRightJoyX(){
   double raw = DriverStick.getX(Hand.kRight);
   return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
@@ -42,6 +43,11 @@ public double getRightJoyX(){
 public double getRightJoyY(){
   double raw = DriverStick.getY(Hand.kRight);
   return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
+}
+
+public double getRightTrigger(){
+  double raw = DriverStick.getTriggerAxis(Hand.kRight);
+  return Math.abs(.8-raw/2) < JOY_DEADZONE ? 0.0 : .8-raw/2;
 }
 
 // Operator Joystick Controls
@@ -60,6 +66,15 @@ public double getOperatorRightJoyX(){
 }
 public double getOperatorRightJoyY(){
   double raw = OperatorStick.getY(Hand.kRight);
+  return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
+}
+public double getOperatorLeftTrigger(){
+  double raw = OperatorStick.getTriggerAxis(Hand.kLeft);
+  return Math.abs(raw) < JOY_DEADZONE ? 0.0 : -.7*raw;
+}
+
+public double getOperatorRightTrigger(){
+  double raw = OperatorStick.getTriggerAxis(Hand.kRight);
   return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
 }
 

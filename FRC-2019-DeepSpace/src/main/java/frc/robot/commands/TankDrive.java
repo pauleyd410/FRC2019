@@ -28,7 +28,7 @@ public class TankDrive extends Command {
   @Override
   protected void execute() {
 
-    Robot.drivebase.set(ControlMode.PercentOutput, .8*Robot.m_oi.getLeftJoyY(), .8*Robot.m_oi.getRightJoyY());
+    Robot.drivebase.set(ControlMode.PercentOutput, Robot.m_oi.getRightTrigger()*Robot.m_oi.getLeftJoyY(), Robot.m_oi.getRightTrigger()*Robot.m_oi.getRightJoyY());
   }
 
   // Make this return true when this Command no longer needs to run execute()

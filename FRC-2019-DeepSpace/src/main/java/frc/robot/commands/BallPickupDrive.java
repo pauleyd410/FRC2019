@@ -29,7 +29,7 @@ public class BallPickupDrive extends Command {
   @Override
   protected void execute() {
 
-    Robot.ballpickup.set(ControlMode.PercentOutput,(Robot.m_oi.getOperatorLeftJoyX())*.5);
+    Robot.ballpickup.set(ControlMode.PercentOutput,(Robot.m_oi.getOperatorLeftTrigger()+Robot.m_oi.getOperatorRightTrigger()));
   }
 
   // Make this return true when this Command no longer needs to run execute()

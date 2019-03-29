@@ -32,8 +32,8 @@ public enum RobotMap {
     DISC_MOTOR(5),
 
     //Victor
-    DISC_ARM_MOTOR(1),
-    PLATFORM_MOTOR(2),
+   // DISC_ARM_MOTOR(1),
+   // PLATFORM_MOTOR(2),
 
     //Solenoids
     //IN_SOLENOID(0),
