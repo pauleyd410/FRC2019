@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "FRC-2019-DeepSpace"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
